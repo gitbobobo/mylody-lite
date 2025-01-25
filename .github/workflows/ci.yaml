@@ -2,8 +2,9 @@ name: CI
 on:
   push:
     branches:
-      - master
-      - main
+      - waiting-for-fix
+      # - master
+      # - main
   pull_request:
 
 env:

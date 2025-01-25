@@ -31,5 +31,7 @@
   "pleaseRetry": "请重试",
   "signInFailed": "登录失败",
   "passwordLengthDesc": "密码长度至少为6位",
-  "invalidVerificationCodeFormat": "验证码格式有误"
+  "invalidVerificationCodeFormat": "验证码格式有误",
+  "home": "首页",
+  "api": "接口"
 }

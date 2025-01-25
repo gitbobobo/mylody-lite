@@ -48,6 +48,5 @@ root.render(
         </SnackbarProvider>
       </QueryClientProvider>
     </ThemeProvider>
-    ,
   </React.StrictMode>
 );

@@ -1,10 +1,9 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import AppTheme from "../../components/AppTheme";
-import ColorModeSelect from "../../components/ColorModeSelect";
 import { Outlet } from "react-router";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const SignInContainer = styled(Stack)(({ theme }) => ({
   height: "calc((1 - var(--template-frame-height, 0)) * 100dvh)",
@@ -34,9 +33,6 @@ export default function AuthLayout(props) {
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
       <SignInContainer direction="column" justifyContent="space-between">
-        {/* <ColorModeSelect
-          sx={{ position: "fixed", top: "1rem", right: "1rem" }}
-        /> */}
         <Outlet />
       </SignInContainer>
     </AppTheme>

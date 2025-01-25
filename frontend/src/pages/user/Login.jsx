@@ -125,7 +125,6 @@ export default function Login() {
             name="email"
             placeholder="your@email.com"
             autoComplete="email"
-            autoFocus
             required
             fullWidth
             variant="outlined"
@@ -142,7 +141,6 @@ export default function Login() {
             type="password"
             id="password"
             autoComplete="current-password"
-            autoFocus
             required
             fullWidth
             variant="outlined"

@@ -31,5 +31,7 @@
   "pleaseRetry": "Please retry",
   "signInFailed": "Sign In Failed",
   "passwordLengthDesc": "Password must be at least 6 characters long",
-  "invalidVerificationCodeFormat": "Invalid verification code format"
+  "invalidVerificationCodeFormat": "Invalid verification code format",
+  "home": "Home",
+  "api": "API"
 }
