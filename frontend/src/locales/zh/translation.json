@@ -33,5 +33,8 @@
   "passwordLengthDesc": "密码长度至少为6位",
   "invalidVerificationCodeFormat": "验证码格式有误",
   "home": "首页",
-  "api": "接口"
+  "api": "接口",
+  "noData": "无数据",
+  "noSectionData": "没有分区数据，请先创建一些分区",
+  "createSection": "创建分区"
 }

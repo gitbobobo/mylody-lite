@@ -1,6 +1,5 @@
 import { queryOptions } from "@tanstack/react-query";
 import config from "../common/config";
-import { useUserStore } from "../stores/useUserStore";
 
 /// 计算 SHA-256 散列值
 const hashPassword = async (password) => {

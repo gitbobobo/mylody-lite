@@ -8,8 +8,12 @@ import IconButton from "@mui/material/IconButton";
 import ColorModeIconDropdown from "./ColorModeIconDropdown";
 import Sitemark from "./SitemarkIcon";
 import LogoutIcon from "@mui/icons-material/LogoutRounded";
+import HomeIcon from "@mui/icons-material/HomeRounded";
+import ApiIcon from "@mui/icons-material/ApiRounded";
 import { useUserStore } from "../stores/useUserStore";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
@@ -29,6 +33,8 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function AppAppBar() {
   const logout = useUserStore((state) => state.logout);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -52,12 +58,23 @@ export default function AppAppBar() {
               flex: 1,
               justifyContent: "center",
               alignItems: "center",
+              gap: 1,
             }}>
-            <Button variant="text" color="info" size="small">
-              浏览
+            <Button
+              variant={location.pathname === "/" ? "outlined" : "text"}
+              color="info"
+              size="small"
+              startIcon={<HomeIcon />}
+              onClick={() => navigate("/")}>
+              {t("home")}
             </Button>
-            <Button variant="text" color="info" size="small">
-              接口
+            <Button
+              variant={location.pathname === "/interface" ? "outlined" : "text"}
+              color="info"
+              size="small"
+              startIcon={<ApiIcon />}
+              onClick={() => navigate("/interface")}>
+              {t("api")}
             </Button>
           </Box>
         </Box>

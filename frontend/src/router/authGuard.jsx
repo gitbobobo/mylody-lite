@@ -1,9 +1,8 @@
 // src/AuthGuard.js
 import React, { useEffect } from "react";
 import { Navigate } from "react-router";
+import LoadingTips from "../components/LoadingTips";
 import { useUserStore } from "../stores/useUserStore";
-import Box from "@mui/material/Box";
-import LinearProgress from "@mui/material/LinearProgress";
 import { useQuery } from "@tanstack/react-query";
 import { getCurrentUserOptions } from "../api/user";
 import { getSystemInfoOptions } from "../api/system";
@@ -25,18 +24,7 @@ const AuthGuard = ({ children }) => {
   }, [data, setUser]);
   if (!user) {
     if (isSystemPending || isPending) {
-      return (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100vh",
-            width: "100%",
-          }}>
-          <LinearProgress sx={{ height: 4, width: "30%", borderRadius: 2 }} />
-        </Box>
-      );
+      return <LoadingTips />;
     } else if (isError) {
       if (systemInfo["can_register"]) {
         return <Navigate to="/signup" />;
